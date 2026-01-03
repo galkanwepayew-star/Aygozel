@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="tk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seniň üçin...</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background-color: #ffc0cb; /* Romantik gulgune arka plan */
+            background: radial-gradient(circle, #ffdee9 0%, #b5fffc 100%);
+            font-family: 'Georgia', serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow-x: hidden;
+            overflow-y: auto;
+        }
+
+        /* Giriş sahypasy */
+        #loginBox {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 35px;
+            border-radius: 25px;
+            box-shadow: 0 10px 30px rgba(255, 20, 147, 0.3);
+            text-align: center;
+            width: 90%;
+            max-width: 400px;
+            z-index: 1000;
+        }
+
+        .intro-title { color: #ff1493; font-size: 26px; margin-bottom: 20px; font-weight: bold; }
+        
+        .password-hint {
+            color: #d63384;
+            font-size: 13px;
+            margin-bottom: 15px;
+            background: #fff0f5;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px dashed #ff69b4;
+        }
+
+        input {
+            padding: 12px;
+            width: 80%;
+            border: 2px solid #ff69b4;
+            border-radius: 15px;
+            text-align: center;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .enter-btn {
+            margin-top: 20px;
+            padding: 12px 40px;
+            background: #ff1493;
+            color: white;
+            border: none;
+            border-radius: 15px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        /* Esasy Sahypa */
+        #mainContent {
+            display: none;
+            width: 92%;
+            max-width: 700px;
+            background: rgba(255, 255, 255, 0.98);
+            padding: 40px 25px;
+            border-radius: 40px;
+            box-shadow: 0 0 50px rgba(255, 20, 147, 0.2);
+            text-align: center;
+            margin: 20px;
+            position: relative;
+        }
+
+        .love-text {
+            color: #444;
+            font-size: 17px;
+            line-height: 1.8;
+            text-align: center;
+        }
+
+        .section-title {
+            color: #ff1493;
+            font-weight: bold;
+            font-size: 20px;
+            display: block;
+            margin: 20px 0 10px 0;
+        }
+
+        /* Düwmeler */
+        .btn-wrapper {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+            height: 150px;
+            position: relative;
+        }
+
+        #noBtn {
+            padding: 12px 30px;
+            background: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: bold;
+            position: absolute;
+            left: 20px;
+            z-index: 100;
+            transition: 0.1s; /* Çalt gaçmagy üçin */
+        }
+
+        #yesBtn {
+            padding: 15px 45px;
+            background: linear-gradient(45deg, #ff1493, #ff69b4);
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 22px;
+            font-weight: bold;
+            position: absolute;
+            right: 20px;
+            box-shadow: 0 5px 15px rgba(255, 20, 147, 0.4);
+        }
+
+        .link-note {
+            margin-top: 50px;
+            font-size: 18px;
+            color: #ff1493;
+            font-weight: bold;
+        }
+
+        .heart {
+            position: fixed;
+            top: -10%;
+            pointer-events: none;
+            z-index: 1;
+            animation: fall linear forwards;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(110vh) rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="loginBox">
+        <h2 class="intro-title">Söýýän seni ezizim,balam❤️‍🔥</h2>
+        <div class="password-hint">Parol? Dünyadaki iň owadan gyzyň doglan gúnimikan parol? 😁🫶🏻</div>
+        <input type="text" id="passInput" placeholder="Sene ýazyň...">
+        <br>
+        <button class="enter-btn" onclick="checkPass()">Giriş 🫀</button>
+    </div>
+
+    <div id="mainContent">
+        <div class="love-text">
+            Seniň gözleriňe seredenimde, diňe bir seni däl, eýsem bütin geljegimi, bagtymy we gözleýän ähli soraglarymyň jogabyny görýärin. Şol geljekde seniň bilen ýol ýöremek, her dertde we her şatlykda seniň elini hiç wagt goýbermezlik meniň iň uly arzuwym. 
+            
+            <span class="section-title">Dünýäniň iň owadan durmuşy</span>
+            Seniň bilen tanyş bolan günümden bäri dünýäm has ýagty, gülüşim has samymy boldy. Sen meniň dünýämiň iň owadan reňki. Şol reňki hiç wagt solmaz ýaly, her günümi seni bagtly etmäge bagyşlamak isleýärin.
+            
+            <span class="section-title">Şu pursat we bütin ömür</span>
+            Durmuşymda köp zat üýtgedi, ýöne saňa bolan söýgim şol duran ýerinde, barha ulalyp dur. Seniň bilen her sekuntda täzeden aşyk bolýaryn. Men seni diňe bir gowy görýän däl, men seniň bilen bütin dünýäden gizlenip, diňe öz dünýämizi gurmak isleýärin. 
+            
+            <span class="section-title">Bagtymyň sebäpkäri</span>
+            Adamlaryň bagtly bolmak üçin müňlerçe sebäbi bar, meniň bolsa diňe bir sebäbim bar: Ol hem sen! Seniň mähriň, seniň bakyşyň meni dünýäniň iň şansly adamy edýär. Gel, bu şansymyzy bakylyga öwreli.
+            <br><br>
+            <strong>Meniň geljegim, meniň söýgülim bolarsyňmy? Seniň kalbyňda maňa ýer barmy? ❤️ Meniň durmuşymyň iň owadan bölegi bolmaga razyňmy? Söýgülim, elini maňa berermiň? 🌹</strong>
+        </div>
+
+        <div class="btn-wrapper">
+            <button id="noBtn" onmouseover="runAway()" onclick="runAway()">Ýok</button>
+            <button id="yesBtn" onclick="celebrate()">Hawa</button>
+        </div>
+
+        <div class="link-note">Jogaby linkden ýaz aygozelimm😁</div>
+    </div>
+
+    <script>
+        function checkPass() {
+            const val = document.getElementById('passInput').value;
+            if (val === "26.12.2009") {
+                document.getElementById('loginBox').style.display = 'none';
+                document.getElementById('mainContent').style.display = 'block';
+                startHearts(500, ['❤️', '💖', '🌹', '🌸']); 
+            } else {
+                alert("Parol ýalňyş, ezizim! 😁❤️");
+            }
+        }
+
+        // GUTARNYKSYZ GAÇMAK FUNKSIÝASY
+        function runAway() {
+            const btn = document.getElementById('noBtn');
+            // Çäklendirmeler: Düwmäniň ekrandan çykyp gitmezligi üçin
+            const maxX = window.innerWidth - btn.offsetWidth - 20;
+            const maxY = window.innerHeight - btn.offsetHeight - 20;
+            
+            const newX = Math.random() * maxX;
+            const newY = Math.random() * maxY;
+            
+            btn.style.position = 'fixed'; // Erkin hereket üçin
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+        }
+
+        function startHearts(speed, items) {
+            setInterval(() => {
+                const heart = document.createElement('div');
+                heart.innerHTML = items[Math.floor(Math.random() * items.length)];
+                heart.className = 'heart';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.fontSize = (Math.random() * 30 + 15) + 'px';
+                heart.style.animationDuration = (Math.random() * 4 + 2) + 's';
+                document.body.appendChild(heart);
+                setTimeout(() => heart.remove(), 5000);
+            }, speed);
+        }
+
+        function celebrate() {
+            startHearts(70, ['✨', '🌹', '💖', '🌸', '💘', '💍']);
+            document.getElementById('yesBtn').innerHTML = "Seni Söýýärin! ❤️";
+            document.getElementById('noBtn').style.display = "none";
+            alert("Meni dünýäniň iň bagtly adamy etdiň! 🥰🌹");
+        }
+    </script>
+</body>
+</html>
